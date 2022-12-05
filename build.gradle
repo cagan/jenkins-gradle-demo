@@ -20,7 +20,7 @@ sourceCompatibility = 17
 
 docker {
     name "${project.name}:${project.version}"
-    files "plugins.txt"
+    files "plugins.txt", "seedJob.xml"
 }
 
 dockerRun {

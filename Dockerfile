@@ -8,5 +8,7 @@ USER jenkins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 
+COPY seedJob.xml /usr/share/jenkins/ref/jobs/seed-job/config.xml
+
 ENV JENKINS_OPTS --httpsKeyStore=/var/lib/jenkins/certificate.pfx --httpsKeyStorePassword=Password12
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
