@@ -16,7 +16,7 @@ plugins {
 }
 
 version = scmVersion.version
-sourceCompatibility = 17
+sourceCompatibility = 11
 
 docker {
     name "${project.name}:${project.version}"
